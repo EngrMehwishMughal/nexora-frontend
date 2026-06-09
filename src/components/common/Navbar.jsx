@@ -1,65 +1,92 @@
-import React from "react";
 import {
+  FaHome,
+  FaUser,
   FaSearch,
   FaHeart,
-  FaShoppingCart,
-  FaUser,
+  FaBell,
 } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          
-          {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="h-10 w-10 rounded-full bg-[#F9A826] flex items-center justify-center font-bold text-xl">
-              N
-            </div>
+    <div className="w-full lg:w-[80px]">
 
-            <h1 className="text-2xl font-bold text-[#0B1020]">
-              Nexora
-            </h1>
-          </div>
+      {/* Desktop Navbar */}
+      <div className="hidden lg:flex w-[80px] h-[520px] flex-col items-center gap-6">
+    {/* Your current vertical navbar code */}
+        {/* LOGO */}
+        <div className="w-12 h-12 bg-[#4F46E5] rounded-full flex items-center justify-center text-textPrimary text-lg font-bold">
+          N
+        </div>
 
-          {/* Desktop Menu */}
-          <ul className="hidden md:flex items-center gap-8 font-medium">
-            <li className="cursor-pointer hover:text-[#F9A826] transition">
-              Home
-            </li>
+        {/* NAV ICONS */}
+        <div className="bg-surface border-border rounded-3xl shadow-sm p-2 flex flex-col items-center gap-4">
 
-            <li className="cursor-pointer hover:text-[#F9A826] transition">
-              Shop
-            </li>
+          <button className="w-10 h-10 rounded-xl bg-[#4F46E5] text-textPrimary flex items-center justify-center hover:bg-indigo-700 transition-all">
+            <FaHome />
+          </button>
 
-            <li className="cursor-pointer hover:text-[#F9A826] transition">
-              Categories
-            </li>
+          <button className="w-10 h-10 rounded-xl text-textPrimary  hover:bg-indigo-700 flex items-center justify-center transition-all">
+            <FaUser />
+          </button>
 
-            <li className="cursor-pointer hover:text-[#F9A826] transition">
-              Contact
-            </li>
-          </ul>
+          <button className="w-10 h-10 rounded-xl text-textPrimary  hover:bg-indigo-700 flex items-center justify-center transition-all">
+            <FaSearch />
+          </button>
 
-          {/* Right Icons */}
-          <div className="flex items-center gap-5 text-lg">
-            <FaSearch className="cursor-pointer hover:text-[#F9A826]" />
-            <FaHeart className="cursor-pointer hover:text-[#F9A826]" />
+          <button className="w-10 h-10 rounded-xl text-textPrimary  hover:bg-indigo-700  flex items-center justify-center transition-all">
+            <FaHeart />
+          </button>
 
-            <div className="relative">
-              <FaShoppingCart className="cursor-pointer hover:text-[#F9A826]" />
+          <button className="w-10 h-10 rounded-xl text-textPrimary  hover:bg-indigo-700  flex items-center justify-center transition-all">
+            <FaBell />
+          </button>
 
-              <span className="absolute -top-2 -right-2 bg-[#F9A826] text-white text-xs h-5 w-5 rounded-full flex items-center justify-center">
-                2
-              </span>
-            </div>
+          <div className="w-[2px] h-16 bg-border rounded-full my-2"></div>
 
-            <FaUser className="cursor-pointer hover:text-[#F9A826]" />
-          </div>
+          <img
+            src="https://i.pravatar.cc/100"
+            alt="User Avatar"
+            className="w-10 h-10 rounded-full border border-border"
+          />
         </div>
       </div>
-    </nav>
+
+      {/* Mobile & Tablet Navbar */}
+<div className="flex lg:hidden items-center justify-between bg-surface border-border rounded-2xl shadow-sm p-3 mb-4">
+
+  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-textPrimary font-bold">
+    A
+  </div>
+
+  <div className="flex items-center gap-2 overflow-x-auto">
+    <button className="w-9 h-9 rounded-lg bg-primary text-textPrimary flex items-center justify-center">
+      <FaHome />
+    </button>
+
+    <button className="w-9 h-9 rounded-lg text-textPrimary">
+      <FaUser />
+    </button>
+
+    <button className="w-9 h-9 rounded-lg text-textPrimary">
+      <FaSearch />
+    </button>
+
+    <button className="w-9 h-9 rounded-lg text-textPrimary">
+      <FaHeart />
+    </button>
+
+    <button className="w-9 h-9 rounded-lg text-textPrimary">
+      <FaBell />
+    </button>
+  </div>
+
+  <img
+    src="https://i.pravatar.cc/100"
+    alt="User Avatar"
+    className="w-10 h-10 rounded-full border border-border"
+  />
+</div>
+    </div>
   );
 };
 
