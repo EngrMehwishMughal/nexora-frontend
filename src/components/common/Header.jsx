@@ -17,21 +17,61 @@ const Header = () => {
   className="
     order-2 lg:order-2
     relative
-    overflow-hidden lg:overflow-visible
+    overflow-visible
     rounded-[28px] md:rounded-[36px] lg:rounded-[40px]
-    min-h-[560px] md:h-[500px] lg:h-[480px]
+    min-h-[520px] md:h-[500px] lg:h-[480px]
     bg-[#070d1c]
     px-5 md:px-8 lg:px-10
     py-8 md:py-10 lg:py-12
   "
 >
+  
+
           {/* HERO BACKGROUND */}
           <div className="absolute inset-0 overflow-hidden rounded-[28px] md:rounded-[36px] lg:rounded-[40px]">
+        
+          <div
+  className="
+    hidden md:block
+    absolute
+    top-1/2
+    right-[-54px]
+    lg:right-[-64px]
+    -translate-y-1/2
+    w-[120px]
+    h-[250px]
+    lg:w-[125px]
+    lg:h-[200px]
+    z-40
+  "
+>
+{/* White notch shape */}
+  <svg
+    viewBox="0 0 120 200"
+    className="absolute inset-0 w-full h-full"
+    preserveAspectRatio="none"
+  >
+    <path
+      d="
+        M120 0
+        L120 200
+        L120 200
+        C60 180 60 145 45 140
+        C5 115 5 85 45 60
+        C60 55 60 20 70 0
+        Z
+      "
+      fill="white"
+    />
+  </svg>  
+ 
+   </div>
             <img
               src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32"
               alt="Camera"
               className="absolute inset-0 w-[180px] md:w-[280px] lg:w-[320px] object-cover opacity-40 left-1/2 md:left-[68%]"
             />
+            
             <div className="absolute inset-0 bg-[#050b18]/70"></div>
           </div>
 
@@ -62,161 +102,147 @@ const Header = () => {
             </Link>
           </div>
 
-        
-          {/* RIGHT ARROW */}
-          {/* ORGANIC SIDE CUTOUT ARROW */}
-{/*<div
+           {/* Arrow button */}
+           <div
   className="
-    hidden md:flex
+    hidden md:block
     absolute
     top-1/2
-    right-[-28px]
-    lg:right-[-38px]
+    right-[-54px]
+    lg:right-[-64px]
     -translate-y-1/2
-    w-[72px]
-    h-[120px]
-    lg:w-[90px]
-    lg:h-[150px]
-    bg-white
-    rounded-l-[999px]
-    items-center
-    justify-start
-    pl-2
-    lg:pl-3
+    w-[120px]
+    h-[250px]
+    lg:w-[125px]
+    lg:h-[200px]
     z-40
-  "
->
-  <button
-    className="
-      w-11 h-11
-      lg:w-14 lg:h-14
-      rounded-full
-      bg-[#4F46E5]
-      hover:bg-indigo-700
-      text-white
-      flex
-      items-center
-      justify-center
-      text-lg
-      lg:text-2xl
-      shadow-lg
-      transition-all
-    "
-  >
-    <BsArrowRight />
-  </button>
-</div>*/}
-{/* RIGHT SIDEBAR */}
-<div
-  className="
-    hidden md:flex
-    absolute
-    top-0
-    right-0
-    h-full
-    w-[70px]
-    lg:w-[90px]
-    bg-white
-    items-center
-    justify-center
-    z-30
-  "
->
-  {/* NOTCH */}
-  <div
+  ">
+    <button
     className="
       absolute
       top-1/2
-      left-0
-      -translate-x-1/2
+      left-[22px]
+      lg:left-[28px]
       -translate-y-1/2
-      w-[60px]
-      h-[100px]
-      lg:w-[80px]
-      lg:h-[130px]
-      bg-white
+      w-12 h-12
+      lg:w-14 lg:h-14
       rounded-full
-      flex
-      items-center
-      justify-center
-      shadow-sm
-    "   style={{
-      borderRadius: "60px",
-    }}
+      bg-[#4f45e7]
+      text-white
+      flex items-center justify-center
+      text-xl lg:text-2xl
+      shadow-md
+    "
   >
-    <button
-      className="
-        w-10
-        h-10
-        lg:w-12
-        lg:h-12
-        rounded-full
-        bg-[#F4A300]
-        flex
-        items-center
-        justify-center
-        text-black
-        text-lg
-        lg:text-xl
-        hover:scale-105
-        transition-all
-      "
-    >
-      <BsArrowRight />
-    </button>
-  </div>
-</div>
-          {/* CENTER CAMERA IMAGE */}
-          <img
-            src="https://pngimg.com/uploads/camera_lens/camera_lens_PNG44.png"
-            alt="Camera lens"
-            className="absolute z-10 w-[220px] md:w-[330px] lg:w-[400px] top-[250px] md:top-20 lg:top-12 left-1/2 md:left-[62%] -translate-x-1/2"
-          />
+    <BsArrowRight />
+  </button></div>
+          
           {/* CATEGORY WHITE BASE */}
           <div
   className="
     absolute
-    left-4 md:left-6 lg:left-8
-    bottom-2 md:bottom-4 lg:bottom-6
+    left-0
+    bottom-0
     z-30
-    bg-white
-    rounded-[28px]
-    md:rounded-[32px]
-    p-2 md:p-3
-    w-[calc(100%-2rem)] md:w-auto
+    w-[calc(100%-2.5rem)] md:w-[370px] lg:w-[420px]
+    h-[190px] md:h-[210px]
   "
 >
-            <div className="w-full md:w-[380px] bg-indigo-500 rounded-[24px] md:rounded-[28px] px-4 md:px-6 py-5 shadow-lg">
-            <h3 className="text-white text-[16px] font-bold mb-3">
-                CATEGORIES
-              </h3>
+  {/* WHITE SVG SHAPE */}
+  <svg
+  viewBox="0 0 500 250"
+  className="absolute inset-0 w-full h-full"
+  preserveAspectRatio="none"
+>
+  <path
+    d="
+      M50 50
+      Q50 0 100 0
+      H450
+      Q500 0 500 50
+      V200
+      Q500 250 450 250
 
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-x-2 md:gap-x-3 gap-y-2">
-                {[
-                  "ART & CRAFT",
-                  "AUTOMOTIVE",
-                  "BABY",
-                  "BEAUTY",
-                  "BOY FASHION",
-                  "COMPUTER",
-                  "DEALS",
-                  "GIRL FASHION",
-                  "ELECTRONIC",
-                  "HOME KITCHEN",
-                  "MOVIE TV",
-                  "VIDEO GAME",
-                ].map((item) => (
-                  <button
-                    key={item}
-                    className="h-[26px] rounded-full border border-white/40 text-[7px] md:text-[8px] font-semibold text-white px-2 whitespace-nowrap hover:bg-white hover:text-[#4F46E5] transition-all"
-                  >
-                    {item}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
+      H50
+      V80
 
+      Q50 50 0 50
+      V0
+      H50
+
+      Z
+    "
+    fill="white"
+  />
+</svg>
+
+  {/* INDIGO BOX */}
+  <div
+    className="
+      relative
+      z-10
+      m-4 md:m-5
+      bg-indigo-500
+      rounded-[22px] md:rounded-[26px]
+      px-4 md:px-6
+      py-5
+      shadow-lg
+    "
+  >
+    <h3 className="text-white text-[16px] font-bold mb-3">
+      CATEGORIES
+    </h3>
+
+    <div className="grid grid-cols-3 sm:grid-cols-4 gap-x-2 md:gap-x-3 gap-y-2">
+      {[
+        "ART & CRAFT",
+        "AUTOMOTIVE",
+        "BABY",
+        "BEAUTY",
+        "BOY FASHION",
+        "COMPUTER",
+        "DEALS",
+        "GIRL FASHION",
+        "ELECTRONIC",
+        "HOME KITCHEN",
+        "MOVIE TV",
+        "VIDEO GAME",
+      ].map((item) => (
+        <button
+          key={item}
+          className="
+            h-[26px]
+            rounded-full
+            border border-white/40
+            text-[7px] md:text-[8px]
+            font-semibold
+            text-white
+            px-2
+            whitespace-nowrap
+            hover:bg-white
+            hover:text-[#4F46E5]
+            transition-all
+          "
+        >
+          {item}
+        </button>
+      ))}
+    </div>
+  </div>
+</div>
+   {/*<div className="absolute left-4 md:left-8 bottom-[-40px] z-30 w-[700px] h-[220px]">
+  
+  {/* Content */}
+  {/*<div className="relative z-10 px-8 py-6">
+    <h3 className="text-black text-2xl font-bold mb-4">
+      CATEGORIES
+    </h3>
+
+    <div className="grid grid-cols-4 gap-3">
+      {/* buttons */}
+  {/* </div>
+  </div>
+</div>*/}
 
           {/* STATS CARD */}
           <div className="hidden md:block absolute bottom-4 right-8 lg:right-24 z-20 backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-5 lg:p-6">
